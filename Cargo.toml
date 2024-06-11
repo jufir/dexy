@@ -1,0 +1,12 @@
+[package]
+name = "dexy"
+version = "0.1.0"
+edition = "2021"
+
+[[bin]]
+name = "dexy"
+
+[dependencies]
+anyhow = "1.0.86"
+binrw = "0.14.0"
+thiserror = "1.0.61"

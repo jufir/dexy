@@ -4,7 +4,7 @@ use binrw::{
 };
 
 pub use error::DexError;
-pub use items::StringID;
+pub use items::{ProtoID, StringID, TypeID};
 
 pub mod error;
 pub mod header;
@@ -15,8 +15,15 @@ mod parse_utils;
 #[derive(Debug, PartialEq, BinRead)]
 pub struct Dex {
     pub header: header::Header,
+
     #[br(count = header.string_ids_size)]
     pub string_ids: Vec<StringID>,
+
+    #[br(count = header.type_ids_size)]
+    pub type_ids: Vec<TypeID>,
+
+    #[br(count = header.proto_ids_size)]
+    pub proto_ids: Vec<ProtoID>,
 }
 
 impl Dex {

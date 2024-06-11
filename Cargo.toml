@@ -9,4 +9,5 @@ name = "dexy"
 [dependencies]
 anyhow = "1.0.86"
 binrw = "0.14.0"
+clap = { version = "4.5.7", features = ["derive"] }
 thiserror = "1.0.61"

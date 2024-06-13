@@ -11,8 +11,10 @@ pub struct Header {
     #[br(parse_with = parse_utils::parse_version)]
     pub version: u32,
     pub checksum: u32,
+
     #[br(count = 20)]
     pub signature: Vec<u8>,
+
     pub file_size: u32,
     pub header_size: u32,
     pub endian_tag: EndianTag,

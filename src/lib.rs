@@ -4,7 +4,8 @@ use binrw::{
 };
 
 pub use error::DexError;
-pub use items::{ProtoID, StringID, TypeID};
+
+use items::{ClassDef, FieldID, MethodID, ProtoID, StringID, TypeID};
 
 pub mod error;
 pub mod header;
@@ -24,6 +25,21 @@ pub struct Dex {
 
     #[br(count = header.proto_ids_size)]
     pub proto_ids: Vec<ProtoID>,
+
+    #[br(count = header.field_ids_size)]
+    pub field_ids: Vec<FieldID>,
+
+    #[br(count = header.method_ids_size)]
+    pub method_ids: Vec<MethodID>,
+
+    #[br(count = header.class_defs_size)]
+    pub class_defs: Vec<ClassDef>,
+
+    #[br(count = header.data_size)]
+    pub data: Vec<u8>,
+
+    #[br(count = header.link_size)]
+    pub link_data: Vec<u8>,
 }
 
 impl Dex {

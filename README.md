@@ -1,7 +1,7 @@
 dexy
 ====
 
-**warning:** i have the attention span of a newborn child so ill probably forget that this exists
+**warning:** I have the attention span of a newborn child so I'll probably forget that this exists.
 
 `dexy` is a powerful library and CLI designed for interacting with DEX files.
 

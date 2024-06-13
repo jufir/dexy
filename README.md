@@ -1,6 +1,8 @@
 dexy
 ====
 
+**warning:** i have the attention span of a newborn child so ill probably forget that this exists
+
 `dexy` is a powerful library and CLI designed for interacting with DEX files.
 
 `dexy` provides tools and utilities for analyzing information from DEX files

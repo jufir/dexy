@@ -14,7 +14,7 @@ fn main() -> anyhow::Result<()> {
     let mut file = File::open(args.file)?;
     let dex = Dex::parse(&mut file)?;
 
-    println!("{:?}", dex.proto_ids);
+    println!("{:?}", dex);
 
     Ok(())
 }
